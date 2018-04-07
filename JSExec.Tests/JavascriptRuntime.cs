@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JSExec.Example
+namespace JSExec.Tests
 {
     public class JavascriptRuntime : IJavascriptRuntime
     {
@@ -24,7 +24,7 @@ namespace JSExec.Example
 
         public object ExecuteJavascriptReturn(string command)
         {
-           return _jsExecutor.ExecuteScript("return (" + command + ");");
+            return _jsExecutor.ExecuteScript("return " + command + ";");
         }
 
         public void SetJavascriptData(string data, object value)

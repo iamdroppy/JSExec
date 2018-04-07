@@ -45,8 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IJavascriptRuntime.cs" />
+    <Compile Include="JavascriptArgumentUtils.cs" />
     <Compile Include="JavascriptDynamic.cs" />
     <Compile Include="JavascriptExecutor.cs" />
+    <Compile Include="MethodExecutor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

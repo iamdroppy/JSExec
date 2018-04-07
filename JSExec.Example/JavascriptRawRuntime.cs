@@ -8,28 +8,22 @@ using System.Threading.Tasks;
 
 namespace JSExec.Example
 {
-    public class JavascriptRuntime : IJavascriptRuntime
+    public class JavascriptRawRuntime : IJavascriptRuntime
     {
-        private IJavaScriptExecutor _jsExecutor;
-
-        internal JavascriptRuntime(IJavaScriptExecutor jsExecutor)
-        {
-            _jsExecutor = jsExecutor;
-        }
-
         public void ExecuteJavascript(string command)
         {
-            _jsExecutor.ExecuteScript(command + ";");
+            Console.WriteLine("Executing: " + command);
         }
 
         public object ExecuteJavascriptReturn(string command)
         {
-           return _jsExecutor.ExecuteScript("return (" + command + ");");
+            Console.WriteLine("Executing: return " + command);
+            return null;
         }
 
         public void SetJavascriptData(string data, object value)
         {
-            _jsExecutor.ExecuteScript(data + " = " + value + ";");
+            Console.WriteLine("Executing: " + data + " = " + value);
         }
     }
 }

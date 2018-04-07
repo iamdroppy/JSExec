@@ -9,6 +9,7 @@ namespace JSExec.Library.Interfaces
     public interface IJavascriptRuntime
     {
         void ExecuteJavascript(string command);
-        T ExecuteJavascriptReturn<T>(string command);
+        object ExecuteJavascriptReturn(string command);
+        void SetJavascriptData(string data, object value);
     }
 }
