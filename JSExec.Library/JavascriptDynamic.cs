@@ -145,7 +145,7 @@ namespace JSExec.Library
             public override bool TrySetMember(SetMemberBinder binder, object value)
             {
                 AddMember(binder);
-                JavascriptInternals.TrySet(this, (JavascriptFallback)value);
+                JavascriptInternals.TrySet(this, value);
 
                 return true;
             }
